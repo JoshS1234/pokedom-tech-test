@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./pokeball.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
+      rel="stylesheet"
+    />
+    <title>PokéDom</title>
+    <script type="module" crossorigin src="/assets/index-8f4e8b95.js"></script>
+    <link rel="stylesheet" href="/assets/index-9782ef4a.css">
+  </head>
+  <body>
+    <body>
+      <h1>PokéDom- gotta code 'em all!</h1>
+      <form>
+        <div class="filter-container">
+          <div class="form__search-box form__search-box--name">
+            <label for="search-box__textbox-name">Search by name</label>
+            <input
+              type="text"
+              name="search-box__name-textbox"
+              class="search-box__name-textbox"
+            />
+          </div>
+          <div class="form__search-box form__search-box--type"></div>
+          <div class="form__search-box form__search-box--number">
+            <p>Show how many results</p>
+            <input type="radio" name="number" id="5" value="5" />
+            <label for="5">5</label><br />
+            <input type="radio" name="number" id="10" value="10" />
+            <label for="10">10</label><br />
+            <input type="radio" name="number" id="20" value="20" />
+            <label for="20">20</label><br />
+            <input type="radio" name="number" id="all" value="all" />
+            <label for="all">All</label><br />
+          </div>
+        </div>
+        <div class="button-container">
+          <input type="submit" value="search" id="search-button" />
+          <input type="reset" value="reset" id="reset-button" />
+        </div>
+      </form>
+      <main class="card-container"></main>
+      
+    </body>
+  </body>
+</html>
