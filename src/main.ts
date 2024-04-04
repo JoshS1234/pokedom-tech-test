@@ -56,34 +56,6 @@ const typeRadio = pokemonTypes.map((type) => {
   <label for="${type.toLowerCase()}">${type}</label><br>`;
 });
 
-// const filterHTML = `
-// <div class="search-box search-box--name" >
-//     <label for="search-box__textbox-name">Search by name</label>
-//     <input type="text" name="search-box__name-textbox" class=" search-box__name-textbox">
-// </div>
-// <div class="search-box search-box--type" >
-// <p>Search by type</p>
-// ${typeRadio.join("")}
-// </div>
-// <div class="search-box search-box--number" >
-// <p>Show how many results</p>
-//     <input type="radio" name="number" id="5" value="5">
-//     <label for="5">5</label><br>
-//     <input type="radio" name="number" id="10" value="10">
-//     <label for="10">10</label><br>
-//     <input type="radio" name="number" id="20" value="20">
-//     <label for="20">20</label><br>
-//     <input type="radio" name="number" id="all" value="all">
-//     <label for="all">All</label><br>
-// </div>
-// <input type="submit" value="search" id="search-button"/>
-// <input type="reset" value="reset" id="reset-button">
-// `;
-
-// let searchContainer = document.createElement("form");
-// searchContainer.innerHTML = filterHTML;
-// body.insertBefore(searchContainer, cardContainer);
-
 const nameTextbox = document.querySelector(".search-box__name-textbox");
 
 const typeCheckbox = document.querySelector(".form__search-box--type");
