@@ -86,9 +86,9 @@ const typeRadio = pokemonTypes.map((type) => {
 
 const nameTextbox = document.querySelector(".search-box__name-textbox");
 
-const typeCheckbox = document.querySelector(".search-box--type");
+const typeCheckbox = document.querySelector(".form__search-box--type");
 
-const showNumberCheckbox = document.querySelector(".search-box__name-textbox");
+const showNumberCheckbox = document.querySelector(".form__search-box--number");
 
 const searchButton = document.querySelector("#search-button");
 const resetButton = document.querySelector("#reset-button");
@@ -116,13 +116,15 @@ const handleSubmit = (e: Event) => {
   const form = target.form as HTMLFormElement;
 
   //get name value
-  const nameTextbox = form.children[0].children[1] as HTMLInputElement;
+  const nameTextbox = form.children[0].children[0]
+    .children[1] as HTMLInputElement;
   console.log(nameTextbox);
   const searchStr = nameTextbox.value.toLowerCase();
 
   //get type
   let type = "";
-  const typeDiv = form.children[1].childNodes as NodeListOf<HTMLInputElement>;
+  const typeDiv = form.children[0].children[1]
+    .childNodes as NodeListOf<HTMLInputElement>;
   console.log(Array(typeDiv));
   typeDiv.forEach((element) => {
     if (element.checked == true) {
@@ -132,7 +134,8 @@ const handleSubmit = (e: Event) => {
 
   //get number to display
   let showNum;
-  const numDiv = form.children[2].childNodes as NodeListOf<HTMLInputElement>;
+  const numDiv = form.children[0].children[2]
+    .childNodes as NodeListOf<HTMLInputElement>;
   numDiv.forEach((element) => {
     if (element.checked == true) {
       showNum = element.value;

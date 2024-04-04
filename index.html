@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,28 +14,37 @@
   </head>
   <body>
     <body>
-    <h1>PokéDom- gotta code 'em all!</h1>
-    <form>
-      <div class="search-box search-box--name" >
-        <label for="search-box__textbox-name">Search by name</label>
-        <input type="text" name="search-box__name-textbox" class=" search-box__name-textbox">
-      </div>
-      <div class="search-box search-box--type" ></div>
-      <div class="search-box search-box--number" >
-        <p>Show how many results</p>
-        <input type="radio" name="number" id="5" value="5">
-        <label for="5">5</label><br>
-        <input type="radio" name="number" id="10" value="10">
-        <label for="10">10</label><br>
-        <input type="radio" name="number" id="20" value="20">
-        <label for="20">20</label><br>
-        <input type="radio" name="number" id="all" value="all">
-        <label for="all">All</label><br>
-      </div>
-      <input type="submit" value="search" id="search-button"/>
-      <input type="reset" value="reset" id="reset-button">
-    </form> 
-    <main class="card-container"></main>
-    <script type="module" src="/src/main.ts"></script>
+      <h1>PokéDom- gotta code 'em all!</h1>
+      <form>
+        <div>
+          <div class="form__search-box form__search-box--name">
+            <label for="search-box__textbox-name">Search by name</label>
+            <input
+              type="text"
+              name="search-box__name-textbox"
+              class="search-box__name-textbox"
+            />
+          </div>
+          <div class="form__search-box form__search-box--type"></div>
+          <div class="form__search-box form__search-box--number">
+            <p>Show how many results</p>
+            <input type="radio" name="number" id="5" value="5" />
+            <label for="5">5</label><br />
+            <input type="radio" name="number" id="10" value="10" />
+            <label for="10">10</label><br />
+            <input type="radio" name="number" id="20" value="20" />
+            <label for="20">20</label><br />
+            <input type="radio" name="number" id="all" value="all" />
+            <label for="all">All</label><br />
+          </div>
+        </div>
+        <div>
+          <input type="submit" value="search" id="search-button" />
+          <input type="reset" value="reset" id="reset-button" />
+        </div>
+      </form>
+      <main class="card-container"></main>
+      <script type="module" src="/src/main.ts"></script>
+    </body>
   </body>
 </html>
