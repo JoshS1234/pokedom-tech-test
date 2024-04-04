@@ -1,5 +1,5 @@
 import "./styles/style.scss";
-import pokemonArray from "./data/pokemon";
+import { pokemonArray } from "./data/pokemon";
 import { Pokemon } from "./data/types";
 
 const cardContainer = document.querySelector(".card-container");
