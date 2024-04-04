@@ -53,7 +53,7 @@ const pokemonTypes = [
 ];
 const typeRadio = pokemonTypes.map((type) => {
   return `<input type="radio" name="type" id="${type.toLowerCase()}" value="${type.toLowerCase()}">
-  <label for="${type.toLowerCase()}">${type}</label>`;
+  <label for="${type.toLowerCase()}">${type}</label><br>`;
 });
 
 // const filterHTML = `
@@ -117,11 +117,13 @@ const handleSubmit = (e: Event) => {
 
   //get name value
   const nameTextbox = form.children[0].children[1] as HTMLInputElement;
+  console.log(nameTextbox);
   const searchStr = nameTextbox.value.toLowerCase();
 
   //get type
   let type = "";
-  const typeDiv = form.children[1].childNodes;
+  const typeDiv = form.children[1].childNodes as NodeListOf<HTMLInputElement>;
+  console.log(Array(typeDiv));
   typeDiv.forEach((element) => {
     if (element.checked == true) {
       type = element.value;
@@ -130,7 +132,7 @@ const handleSubmit = (e: Event) => {
 
   //get number to display
   let showNum;
-  const numDiv = form.children[2].childNodes;
+  const numDiv = form.children[2].childNodes as NodeListOf<HTMLInputElement>;
   numDiv.forEach((element) => {
     if (element.checked == true) {
       showNum = element.value;
